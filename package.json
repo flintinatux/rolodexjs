@@ -1,0 +1,26 @@
+{
+  "name": "rolodexjs",
+  "version": "0.0.0",
+  "main": "server/server.coffee",
+  "scripts": {
+    "start": "pm2 start processes.json",
+    "stop": "pm2 delete all"
+  },
+  "dependencies": {
+    "coffee-script": "^1.8.0",
+    "compression": "^1.0.3",
+    "debug": "^2.1.1",
+    "errorhandler": "^1.1.1",
+    "loopback": "^2.8.0",
+    "loopback-boot": "^2.4.0",
+    "loopback-datasource-juggler": "^2.7.0",
+    "pm2": "^0.12.3",
+    "serve-favicon": "^2.0.1"
+  },
+  "optionalDependencies": {
+    "loopback-explorer": "^1.1.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.6"
+  }
+}

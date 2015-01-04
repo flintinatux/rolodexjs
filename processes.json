@@ -1,0 +1,9 @@
+{
+  "apps": [{
+    "name": "rolodexjs",
+    "script": "server/server.coffee",
+    "watch": ["server"],
+    "exec_mode": "cluster_mode",
+    "instances": 1
+  }]
+}
