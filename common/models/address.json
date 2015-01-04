@@ -1,0 +1,39 @@
+{
+  "name": "address",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "street": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "postcode": {
+      "type": "string"
+    },
+    "contactId": {
+      "type": "number",
+      "required": true
+    },
+    "createdAt": {
+      "type": "date"
+    },
+    "updatedAt": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "contact": {
+      "type": "belongsTo",
+      "model": "contact",
+      "foreignKey": "contactId"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

@@ -25,5 +25,13 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "address": {
+    "dataSource": "db",
+    "public": false
+  },
+  "contact": {
+    "dataSource": "db",
+    "public": true
   }
 }

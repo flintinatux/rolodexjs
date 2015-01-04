@@ -11,10 +11,12 @@
     "compression": "^1.0.3",
     "debug": "^2.1.1",
     "errorhandler": "^1.1.1",
+    "lodash": "^2.4.1",
     "loopback": "^2.8.0",
     "loopback-boot": "^2.4.0",
     "loopback-datasource-juggler": "^2.7.0",
     "pm2": "^0.12.3",
+    "request": "^2.51.0",
     "serve-favicon": "^2.0.1"
   },
   "optionalDependencies": {

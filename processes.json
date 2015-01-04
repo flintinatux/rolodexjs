@@ -2,7 +2,10 @@
   "apps": [{
     "name": "rolodexjs",
     "script": "server/server.coffee",
-    "watch": ["server"],
+    "watch": [
+      "common",
+      "server"
+    ],
     "exec_mode": "cluster_mode",
     "instances": 1
   }]
