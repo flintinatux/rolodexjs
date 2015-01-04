@@ -3,14 +3,26 @@
   "version": "0.0.0",
   "main": "server/server.coffee",
   "scripts": {
+    "build": "npm run build:styles",
+    "build:styles": "lessc client/app.less --clean-css='--s0 --compatibility=ie8' --autoprefix | hashmark -n public/app.css -s -l 8 -m public/assets.json 'public/{name}-{hash}{ext}'",
+    "clean": "rm -rf public/*",
+    "prebuild": "npm run clean",
+    "prewatch": "npm run clean",
     "start": "pm2 start processes.json",
-    "stop": "pm2 delete all"
+    "stop": "pm2 delete all",
+    "watch:styles": "npm run watch:styles:rebuild && onchange 'client/**/*.less' -- npm run watch:styles:rebuild",
+    "watch:styles:rebuild": "lessc client/app.less public/app.css --source-map --source-map-less-inline --autoprefix"
   },
   "dependencies": {
+    "autoprefixer": "^4.0.0",
     "coffee-script": "^1.8.0",
     "compression": "^1.0.3",
     "debug": "^2.1.1",
     "errorhandler": "^1.1.1",
+    "hashmark": "^2.0.1",
+    "less": "^2.2.0",
+    "less-plugin-autoprefix": "^1.1.0",
+    "less-plugin-clean-css": "^1.4.0",
     "lodash": "^2.4.1",
     "loopback": "^2.8.0",
     "loopback-boot": "^2.4.0",

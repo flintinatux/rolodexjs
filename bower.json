@@ -1,0 +1,17 @@
+{
+  "name": "rolodexjs",
+  "repo": "flintinatux/rolodexjs",
+  "version": "0.0.0",
+  "main": [
+    "public/app.js",
+    "public/app.css"
+  ],
+  "ignore": [
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.2.0",
+    "bootstrap": "~3.3.1"
+  }
+}
