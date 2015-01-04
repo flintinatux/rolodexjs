@@ -27,7 +27,7 @@
     "public": false
   },
   "address": {
-    "dataSource": "db",
+    "dataSource": null,
     "public": false
   },
   "contact": {

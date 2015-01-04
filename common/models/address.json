@@ -1,6 +1,6 @@
 {
   "name": "address",
-  "base": "PersistedModel",
+  "base": "Model",
   "idInjection": true,
   "properties": {
     "street": {
@@ -14,26 +14,10 @@
     },
     "postcode": {
       "type": "string"
-    },
-    "contactId": {
-      "type": "number",
-      "required": true
-    },
-    "createdAt": {
-      "type": "date"
-    },
-    "updatedAt": {
-      "type": "date"
     }
   },
   "validations": [],
-  "relations": {
-    "contact": {
-      "type": "belongsTo",
-      "model": "contact",
-      "foreignKey": "contactId"
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": []
 }
