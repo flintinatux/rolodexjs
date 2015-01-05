@@ -1,0 +1,49 @@
+.container {
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.content {
+  display: flex;
+  flex-grow: 2;
+
+  #page {
+    flex-grow: 2;
+  }
+
+  #sidebar {
+    background-color: @gray-90;
+    border-right: 1px solid @gray-80;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 25.0rem;
+  }
+}
+
+.header {
+  background-color: @gray-90;
+  border-bottom: 1px solid @gray-80;
+  flex-shrink: 0;
+  height: 5.0rem;
+
+  .title {
+    color: @gray-50;
+    font-size: 2.0rem;
+    padding: 1.0rem 1.5rem 1.3rem;
+
+    .logo {
+      .fa();
+      margin-right: 10px;
+
+      &:before {
+        content: @fa-var-sort-alpha-desc;
+      }
+    }
+  }
+}

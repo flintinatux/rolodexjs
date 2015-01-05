@@ -1,0 +1,21 @@
+.btn() {
+  background: white;
+  border: 1px solid @gray-80;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  padding: 0.8rem 1.2rem;
+
+  &:hover {
+    background: darken(white, 5%);
+  }
+}
+
+.btn-success() {
+  background: @brand-success;
+  border-color: darken(@brand-success, 5%);
+  color: white;
+
+  &:hover {
+    background: darken(@brand-success, 5%);
+  }
+}
