@@ -12,7 +12,7 @@
     "prewatch": "npm run clean",
     "start": "pm2 start processes.json",
     "stop": "pm2 delete all",
-    "watch": "parallelshell 'npm run watch:markup' 'npm run watch:scripts' 'npm run watch:styles'",
+    "watch": "parallelshell 'npm run watch:markup' 'npm run watch:scripts' 'npm run watch:styles' 'yalr --path public --quiet'",
     "watch:markup": "jade -P -w client/*.jade -o public",
     "watch:scripts": "watchify client/app.coffee -d -t coffeeify --extension=.coffee -o public/app.js -v",
     "watch:styles": "npm run watch:styles:rebuild && onchange 'client/**/*.less' -- npm run watch:styles:rebuild",
@@ -41,7 +41,8 @@
     "pm2": "^0.12.3",
     "request": "^2.51.0",
     "serve-favicon": "^2.0.1",
-    "watchify": "^2.2.1"
+    "watchify": "^2.2.1",
+    "yalr": "^1.1.1"
   },
   "optionalDependencies": {
     "loopback-explorer": "^1.1.0"
